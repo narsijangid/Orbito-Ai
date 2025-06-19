@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbito AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujkfCkWNML9fmmArMhcleaCn7aZPJ1uGGMQ&s">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div style="font-size:2rem;font-weight:700;color:#FFD43B;text-align:center;margin-bottom:40px;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:1px;">Orbito AI</div>
+            <button id="new-chat" class="new-chat-btn">+ New chat</button>
+        </div>
+        <ul id="chat-history" class="chat-history"></ul>
+    </div>
+    <div class="main-area">
+        <div class="chat-header">
+            <button id="menu-btn" class="menu-btn" title="Menu">
+                <svg width="26" height="26" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2" fill="#FFD43B"/><circle cx="12" cy="12" r="2" fill="#FFD43B"/><circle cx="19" cy="12" r="2" fill="#FFD43B"/></svg>
+            </button>
+            <!-- <span>Masai AI</span> -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujkfCkWNML9fmmArMhcleaCn7aZPJ1uGGMQ&s" alt="Profile" class="profile-img">
+        </div>
+        <div class="chat-content" id="response-container">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="input-bar">
+            <div class="input-row-1">
+                <input type="text" id="prompt" placeholder="Ask anything" autocomplete="off" />
+            </div>
+            <div class="input-row-2">
+                <div class="input-left">
+                    <button id="plus-btn" class="circle-btn" title="Add">
+                        <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#fff" d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z"/></svg>
+                    </button>
+                    <button id="tools-btn" class="tools-btn" title="Tools">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#FFD43B" d="M10.325 4.317a1.25 1.25 0 0 1 2.35 0l.286.859a2.25 2.25 0 0 0 2.05 1.534l.9.05a1.25 1.25 0 0 1 .72 2.18l-.68.68a2.25 2.25 0 0 0 0 3.182l.68.68a1.25 1.25 0 0 1-.72 2.18l-.9.05a2.25 2.25 0 0 0-2.05 1.534l-.286.859a1.25 1.25 0 0 1-2.35 0l-.286-.859A2.25 2.25 0 0 0 7.7 14.181l-.9-.05a1.25 1.25 0 0 1-.72-2.18l.68-.68a2.25 2.25 0 0 0 0-3.182l-.68-.68a1.25 1.25 0 0 1 .72-2.18l.9-.05A2.25 2.25 0 0 0 10.04 5.176l.286-.859Z"/></svg>
+                        <span>Tools</span>
+                    </button>
+                </div>
+                <div class="input-right">
+                    <button id="audio-btn" class="circle-btn" title="Record Audio" style="padding:0;overflow:hidden;">
+                        <img src="https://img.freepik.com/premium-photo/minimal-microphone-symbol-yellow-background-3d-rendering_750318-255.jpg" alt="Record" style="width:22px;height:22px;border-radius:50%;object-fit:cover;display:block;" />
+                    </button>
+                    <button id="submit" class="circle-btn" title="Send">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="#fff"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
