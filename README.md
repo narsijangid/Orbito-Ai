@@ -1,6 +1,6 @@
 # Orbito AI – Voice & Text AI Chatbot using Gemini API
 
-**GemBot** is a professional AI chatbot built using **React.js** and powered by **Google's Gemini API**. The application features a clean and responsive user interface that supports both **text** and **voice-based input** for real-time interactions. Users can initiate a **new chat session** at any time, ensuring each conversation is contextually separated.
+**Orbito** is a professional AI chatbot built using **React.js** and powered by **Google's Gemini API**. The application features a clean and responsive user interface that supports both **text** and **voice-based input** for real-time interactions. Users can initiate a **new chat session** at any time, ensuring each conversation is contextually separated.
 
 This project was created to replicate a modern AI assistant experience (similar to ChatGPT) using cutting-edge APIs and frontend technologies. It's fully browser-based and delivers a smooth, fast, and user-friendly chatting experience.
 
