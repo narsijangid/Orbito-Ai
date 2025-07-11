@@ -51,7 +51,7 @@ function startNewChat() {
 
 newChatBtn.addEventListener("click", startNewChat);
 
-// Sidebar toggle
+
 function closeSidebar() {
     sidebar.classList.add('closed');
     mainArea.classList.add('full');
@@ -74,7 +74,7 @@ window.addEventListener('resize', () => {
     else openSidebar();
 });
 
-const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDhDhiKFkaYAp-o0lGL4e4uJSYIJSh6paY";
+const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBIPqgV2uz9uepY-RmiGcUb50AYIWkk0ns";
 let user = { message: null };
 
 async function generateResponse() {
@@ -103,10 +103,10 @@ function handlechatResponse(userMessage) {
     prompt.value = "";
     if (!chatHistory[currentChatIndex]) startNewChat();
     chatHistory[currentChatIndex].messages.push({ role: "user", text: userMessage });
-    // Update chat title if it's still 'New Chat' or default
+ 
     let chat = chatHistory[currentChatIndex];
     if (chat.title === 'New Chat' || chat.title.startsWith('Chat ')) {
-        // Pick a random line from the conversation so far (user or ai)
+
         let allLines = chat.messages.map(m => m.text).filter(Boolean);
         if (allLines.length > 0) {
             let randomLine = allLines[Math.floor(Math.random() * allLines.length)];
@@ -120,7 +120,7 @@ function handlechatResponse(userMessage) {
 }
 
 function handleAIResponse(responseText) {
-    // Replace 'Google' with 'Narsi Jangid' in the AI response
+   
     let filteredResponse = responseText.replace(/Google/g, 'Orbito Ai and CEO Narsi jangid');
     if (chatHistory[currentChatIndex]) {
         chatHistory[currentChatIndex].messages.push({ role: "ai", text: filteredResponse });
@@ -136,14 +136,14 @@ function typeWriterEffect(text, callback) {
     function type() {
         if (!chat || !chat.messages.length) return;
         let partial = text.slice(0, idx + 1);
-        // Render all previous messages, but last AI message is partial
+     
         responseContainer.innerHTML = chat.messages.slice(0, -1).map(m =>
             `<div class="message-row ${m.role}"><div class="bubble ${m.role}">${m.text}</div></div>`
         ).join("") + `<div class="message-row ai"><div class="bubble ai">${partial}</div></div>`;
         responseContainer.scrollTop = responseContainer.scrollHeight;
         if (idx < text.length - 1) {
             idx++;
-            setTimeout(type, 18); // typing speed
+            setTimeout(type, 18);
         } else if (callback) {
             callback();
         }
@@ -156,6 +156,6 @@ prompt.addEventListener("keydown", (e) => {
 });
 submitbtn.addEventListener("click", () => handlechatResponse(prompt.value));
 
-// On load
+
 if (chatHistory.length === 0) startNewChat();
 else { renderChatHistory(); renderChatContent(); }
