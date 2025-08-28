@@ -74,7 +74,7 @@ window.addEventListener('resize', () => {
     else openSidebar();
 });
 
-const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBIPqgV2uz9uepY-RmiGcUb50AYIWkk0ns";
+const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBwREmJ0P8f2mrDZzh4rCNYGbHHMa6Lb3c";
 let user = { message: null };
 
 async function generateResponse() {
